@@ -12,9 +12,11 @@ class _CurrentConverterCupertinoPageState
     extends State<CurrentConverterCupertinoPage> {
   double result = 0;
   final TextEditingController textcontroller = TextEditingController();
+
   @override
-  void initState() {
-    super.initState();
+  void dispose() {
+    textcontroller.dispose();
+    super.dispose();
   }
 
   @override
